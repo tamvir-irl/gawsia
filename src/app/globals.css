@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.shdw{
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+.hbar{
+  height: 3px;
+  background: linear-gradient(to right, transparent, black, transparent);
+  margin: 20px 0;
+}
