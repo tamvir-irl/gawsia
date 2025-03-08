@@ -8,7 +8,7 @@ export default function Home() {
   const [hidden, setHidden] = useState(false);
 
   const units = ["Circular Knitting Machine"];
-  const about = ["ABOUT US" , "MISSION & VISION", "WHY CHOOSE US", "CERTIFICATES"];
+  const about = ["ABOUT US", "OUR SERVICE" , "MISSION & VISION", "WHY CHOOSE US", "ABOUT BUEN-KNIT", "LEADERSHIP TEAM", "AWARDS AND ACHIEVEMENTS"];
   const products = [
     "Single Jersey Machines",
     "Double Jersey Machines",
@@ -64,7 +64,7 @@ export default function Home() {
           <a href="#">Gallery</a>
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-        <Dropdown title={"CONNECT"} items={["CONTACT US", "LEADERSHIP TEAM", "NEWS AND UPDATES", "FEEDBACK"]} />
+        <Dropdown title={"CONNECT"} items={["CONTACT US", "NEWS AND UPDATES", "FEEDBACK"]} />
         </li>
       </ul>
     </nav>

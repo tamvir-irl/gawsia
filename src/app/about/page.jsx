@@ -2,13 +2,15 @@ import Link from "next/link";
 
 const AboutUs = () => {
   return (
-    <div className="p-4 w-full h-full">
-      <div className="mt-28 w-full h-full">
-        <img src="/B1.jpg" alt="" />
+
+    <div className="py-4  w-full h-full">
+        <img className="mt-28" src="/B1.jpg" alt="" />
+      <div className="mt-2 px-[12.4rem] w-full h-full">
+        
         <div className="w-full h-full flex">
           <div className="w-1/4 h-full flex flex-col items-center px-2 py-2">
             <div className="w-full  flex flex-col py-5 border">
-              <h1 className="w-full text-2xl border-l-4 border-yellow-400 p-4">
+              <h1 className="w-full text-2xl font-bold border-l-4 border-slate-900 p-4">
                 Our Products
               </h1>
               <div className="w-full px-6 uppercase">
@@ -27,11 +29,11 @@ const AboutUs = () => {
               </div>
             </div>
             <div className="w-full  flex flex-col py-5 border">
-              <h3 className="w-full text-2xl border-l-4 border-yellow-400 p-4">Contact</h3>
+              <h3 className="w-full text-2xl border-l-4 border-slate-900 p-4 font-bold">Contact</h3>
               <div className="w-full px-6 uppercase">
                 <div className="w-full border-b py-2">
                     <Link className="" href="/products/knitting-machine">
-                    <span className="text-sm hover:text-white">
+                    <span className="text-sm hover:text-gray-500">
                     Add: 4th Floor, Navana Tower, 45 Gulshan Ave<br/>
                     Dhaka-1212, Bangladesh.
                   </span>
@@ -39,24 +41,24 @@ const AboutUs = () => {
                 </div>
                 <div className="w-full border-b py-2">
                     <Link className="flex flex-col" href="/products/knitting-machine">
-                    <span className="text-sm hover:text-white">Phone: +8801995767752, +8801929969797</span>
-                    <span className="text-sm hover:text-white pl-[3.6rem]">+8801990009039, +8801910519200</span>
+                    <span>Phone: <span className="text-sm hover:text-gray-500">+8801995767752</span>, <span className="text-sm hover:text-gray-500">+8801929969797</span></span>
+                    <span className="text-sm pl-[3.6rem]"><span className="hover:text-gray-500">+8801990009039</span>, <span className="hover:text-gray-500">+8801910519200</span></span>
                     </Link>
                 </div>
                 <div className="w-full border-b py-2">
-                    <Link className="" href="/products/knitting-machine"><span className="text-sm hover:text-white">Hotline: +8801886610800</span></Link>
+                    <Link className="" href="/products/knitting-machine"><span className="text-sm hover:text-gray-500">Hotline: +8801886610800</span></Link>
                 </div>
                 <div className="w-full border-b py-2">
-                    <Link className="" href="/products/knitting-machine"><span className="text-sm hover:text-white">WeChat: +8801995767752</span></Link>
+                    <Link className="" href="/products/knitting-machine"><span className="text-sm hover:text-gray-500">WeChat: +8801995767752</span></Link>
                 </div>
                 <div className="w-full border-b py-2">
-                    <Link className="" href="/products/knitting-machine"><span className="text-sm hover:text-white">Email: <span className="lowercase">info@git.com</span></span></Link>
+                    <Link className="" href="/products/knitting-machine"><span className="text-sm hover:text-gray-500">Email: <span className="lowercase">info@git.com</span></span></Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-3/4 h-full p-4">
-            <h1 className="text-4xl font-bold py-6">About Us</h1>
+          <div className="w-3/4 h-full py-8 px-10">
+            <h1 className="text-4xl font-bold py-6 w-full border-b">About Us</h1>
             <br />
             <p className="text-justify text-xl ">
               Gawsia International Trade believes in serving the people and the

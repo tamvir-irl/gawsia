@@ -60,11 +60,11 @@ export default function Home() {
 
   const Footer = () => {
     return (
-      <footer className="bg-gray-900 text-gray-300 pt-16 pb-4">
+      <footer className="bg-gray-900 text-gray-300 pt-6 pb-4">
         <div className="container mx-auto px-6 md:px-16 lg:px-28">
           <div className="flex flex-wrap justify-between">
             {/* Contact Section */}
-            <div className="mb-10">
+            <div className="mb-2">
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
