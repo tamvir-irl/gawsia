@@ -81,6 +81,9 @@ export default function Home() {
                 <span className="text-sm hover:text-white">Hotline: +8801886610800</span>
                 </li>
                 <li className="flex flex-col gap-1">
+                <span className="text-sm hover:text-white">WeChat: +8801995767752</span>
+                </li>
+                <li className="flex flex-col gap-1">
                 <span className="text-sm hover:text-white">Email: info@git.com</span>
                 </li>
               </ul>

@@ -12,7 +12,6 @@ export default function Home() {
   }
   return (
     <div className="w-full h-screen">
-      <Navbar />
       <Carousel />
       <Section1 title={"About Us"} description={descriptions.about} bg={'/about.jpg'}/>
       <Section1 title={"Our Services"} description={descriptions.services} bg={'/2.jpg'} reversed={true}/>
@@ -26,7 +25,7 @@ export default function Home() {
       <br />
       <br />
       <Carousel2 />
-      <Footer />
+      
     </div>
   );
 }

@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Dropdown from "./dropdown";
@@ -45,7 +46,7 @@ export default function Home() {
       <Image className="ml-0" src={"/logo.png"} width={120} height={120} />
       <ul className="flex gap-10 text-gray-600 mr-10 uppercase font-bold">
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
           <Dropdown title={"WHO WE ARE"} items={about} />
