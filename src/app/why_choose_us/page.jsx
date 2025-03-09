@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const AboutUs = () => {
+const WhyChooseUs = () => {
   return (
 
     <div className="py-4  w-full h-full">
@@ -34,7 +34,7 @@ const AboutUs = () => {
                 <div className="w-full border-b py-2">
                   <Link className="" href="/products/knitting-machine">
                     <span className="text-sm hover:text-gray-500">
-                      Add: 4th Floor, Navana Tower, 45 Gulshan Ave<br />
+                      Add: 4th Floor, Navana Tower, 45 Gulshan Ave
                       Dhaka-1212, Bangladesh.
                     </span>
                   </Link>
@@ -58,38 +58,22 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="w-3/4 h-full py-8 px-10">
-            <h1 className="text-4xl font-bold py-6 w-full border-b">About Us</h1>
+            <h1 className="text-4xl font-bold py-6 w-full border-b">Why Choose Us</h1>
             <br />
-            <p className="text-justify text-xl ">
-              Gawsia International Trade believes in serving the people and the
-              country, not only in doing business and making profit. Our concern
-              is to offer the best possible services and provide products to
-              customers for attaining their full satisfaction. We, Gawsia
-              International Trade, provide the best quality circular knitting
-              machine. We are the only authorized agent of Quanzhou Buen-Knit
-              Machinery Co., Limited in Bangladesh.
-              <br />
-              <br />
-              Our collaboration with Quanzhou Buen-Knit Machinery Co., Limited
-              allows us to deliver high speed circular knitting machines
-              technology and reliable machinery to the local market. By
-              prioritizing quality and customer service, we aim to contribute to
-              the growth of the textile industry in Bangladesh while fostering
-              strong relationships with our clients.
-              <br />
-              <br />
-              Our dedicated team is always ready to assist with any inquiries,
-              ensuring that our customers receive timely support and guidance.
-              We believe that by investing in our clients’ success, we can
-              collectively elevate standards in the textile sector and drive
-              innovation forward.
-              <br />
-              <br />
-              By prioritizing these values, we aim to inspire others to join us
-              in creating a more responsible future. Together, we can foster
-              innovation that supports long-term growth while protecting the
-              planet for generations to come.
-            </p>
+            <div className="text-justify text-xl ">
+              <p>We always believe that to doing long time business is to satisfy our customers by proving them good quality machines and best after sales services. The main reasons for choosing us in bellow:</p>
+              <p>1.	High Speed Circular Knitting Machines.</p>
+              <p>2.	High Production Capacity Circular Knitting Machines.</p>
+              <p>3.	Energy Saving Circular Knitting Machines.</p>
+              <p>4.	Long Time Legibility Circular Knitting Machines.</p>
+              <p>5.	Good Circular Knitting Machines Performance.</p>
+              <p>6.	1-Year Warranty Support Circular Knitting Machines.</p>
+              <p>7.	Best Competitive Price Circular Knitting Machines.</p>
+              <p>8.	Best Professional Technical Team.</p>
+              <p>9.	Always in touch with customers.</p>
+              <p>10.	Maintaining Good Relations with customers.</p>
+
+            </div>
           </div>
         </div>
       </div>
@@ -97,4 +81,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default WhyChooseUs;

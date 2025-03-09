@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
-export default function Dropdown({ title, items }) {
+export default function Dropdown({ title, items, paths }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,7 +25,7 @@ export default function Dropdown({ title, items }) {
             {items.map((item, index) => (
               <a
                 key={index}
-                href="#"
+                href={paths[index]} // Link to the corresponding path
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
                 {item}

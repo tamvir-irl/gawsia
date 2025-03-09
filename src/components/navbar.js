@@ -1,4 +1,5 @@
 "use client"
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Dropdown from "./dropdown";
@@ -8,31 +9,56 @@ export default function Home() {
   const [hidden, setHidden] = useState(false);
 
   const units = ["Circular Knitting Machine"];
-  const about = ["ABOUT US", "OUR SERVICE" , "MISSION & VISION", "WHY CHOOSE US", "ABOUT BUEN-KNIT", "LEADERSHIP TEAM", "AWARDS AND ACHIEVEMENTS"];
+  const unitPaths = ["/circular_knitting_machine"];
+
+  const about = [
+    "ABOUT US", 
+    "OUR SERVICES", 
+    "MISSION & VISION", 
+    "WHY CHOOSE US", 
+    "ABOUT BUEN-KNIT", 
+    "LEADERSHIP TEAM", 
+    "AWARDS AND ACHIEVEMENTS"
+  ];
+  const aboutPaths = [
+    "/about", 
+    "/our_services", 
+    "/mission_vision", 
+    "/why_choose_us", 
+    "/about_buen_knit", 
+    "/leadership_team", 
+    "/awards_achievements"
+  ];
+
   const products = [
     "Single Jersey Machines",
     "Double Jersey Machines",
     "Electronic Jacquard Machines",
     "CIRCULAR KNITTING MACHINES SPARE PARTS"
   ];
+  const productPaths = [
+    "/single_jersey_machines",
+    "/double_jersey_machines",
+    "/electronic_jacquard_machines",
+    "/circular_knitting_machines_spare_parts"
+  ];
+
+  const connect = ["CONTACT US", "NEWS AND UPDATES", "FEEDBACK"];
+  const connectPaths = ["/contact", "/news_updates", "/feedback"];
+
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
-
     if (currentScrollY > 100 && !hidden) {
       setHidden(true);
-    }
-    else if (currentScrollY <= 100 && hidden) {
+    } else if (currentScrollY <= 100 && hidden) {
       setHidden(false);
     }
     setScrollPosition(currentScrollY);
   };
 
   useEffect(() => {
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-
     return () => {
-      // Clean up the scroll event listener
       window.removeEventListener("scroll", handleScroll);
     };
   }, [hidden]);
@@ -49,22 +75,22 @@ export default function Home() {
           <a href="/">Home</a>
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-          <Dropdown title={"WHO WE ARE"} items={about} />
+          <Dropdown title={"WHO WE ARE"} items={about} paths={aboutPaths} />
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-          <Dropdown title={"Business Unit"} items={units} />
+          <Dropdown title={"Business Unit"} items={units} paths={unitPaths} />
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-          <Dropdown title={"Products"} items={products} />
+          <Dropdown title={"Products"} items={products} paths={productPaths} />
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-          <a href="#">Clients</a>
+          <a href="/clients">Clients</a>
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-          <a href="#">Gallery</a>
+          <a href="/gallery">Gallery</a>
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-        <Dropdown title={"CONNECT"} items={["CONTACT US", "NEWS AND UPDATES", "FEEDBACK"]} />
+          <Dropdown title={"CONNECT"} items={connect} paths={connectPaths} />
         </li>
       </ul>
     </nav>
