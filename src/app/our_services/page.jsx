@@ -1,49 +1,29 @@
+import Footer from "@/components/footer";
 import Link from "next/link";
+import { products } from "../utils/products";
 
 const OurServices = () => {
   return (
+    <>
     <div className="py-4  w-full h-full">
       <img className="mt-28" src="/B1.jpg" alt="" />
       <div className="mt-2 px-[12.4rem] w-full h-full">
         <div className="w-full h-full flex">
-          <div className="w-1/4 h-full flex flex-col items-center px-2 py-2">
+          <div className="w-1/3 h-full flex flex-col items-center px-2 py-2 sticky top-28">
             <div className="w-full  flex flex-col py-5 border">
               <h1 className="w-full text-2xl font-bold border-l-4 border-slate-900 p-4">
                 Our Products
               </h1>
               <div className="w-full px-6 uppercase">
-                <div className="w-full border-b py-2">
-                  <Link
-                    className="hover:text-gray-500 hover:underline"
-                    href="/products/knitting-machine"
-                  >
-                    1. Single Jersey Machines
-                  </Link>
-                </div>
-                <div className="w-full border-b py-2">
-                  <Link
-                    className="hover:text-gray-500 hover:underline"
-                    href="/products/knitting-machine"
-                  >
-                    2. Double Jersey Machines
-                  </Link>
-                </div>
-                <div className="w-full border-b py-2">
-                  <Link
-                    className="hover:text-gray-500 hover:underline"
-                    href="/products/knitting-machine"
-                  >
-                    3. Electronic Jacquard Machines
-                  </Link>
-                </div>
-                <div className="w-full border-b py-2">
-                  <Link
-                    className="hover:text-gray-500 hover:underline"
-                    href="/products/knitting-machine"
-                  >
-                    4. Circular Knitting Machines SPare Parts
-                  </Link>
-                </div>
+              {products.map((product) => {
+                  return (
+                    <div className="w-full border-b py-2" key={product}>
+                      <Link className="" href={`/products/${product}`}>
+                        {products.indexOf(product) + 1}. {product}
+                      </Link>
+                    </div> 
+                  )
+                })}
               </div>
             </div>
             <div className="w-full  flex flex-col py-5 border">
@@ -53,7 +33,7 @@ const OurServices = () => {
               <div className="w-full px-6 uppercase">
                 <div className="w-full border-b py-2">
                   <Link className="" href="/products/knitting-machine">
-                    <span className="text-sm ">
+                    <span className=" ">
                       ADD:{" "}
                       <span className="hover:text-gray-500 hover:underline">
                         4th Floor, Navana Tower, 45 Gulshan Ave Dhaka-1212,
@@ -66,18 +46,18 @@ const OurServices = () => {
                   <Link
                     className="flex flex-col"
                     href="/products/knitting-machine"
-                  >
+                    >
                     <span>
                       Phone:{" "}
-                      <span className="text-sm hover:text-gray-500 hover:underline">
+                      <span className=" hover:text-gray-500 hover:underline">
                         +8801995767752
                       </span>
                       ,{" "}
-                      <span className="text-sm hover:text-gray-500 hover:underline">
+                      <span className=" hover:text-gray-500 hover:underline">
                         +8801929969797
                       </span>
                     </span>
-                    <span className="text-sm pl-[4.1rem]">
+                    <span className=" pl-[4.1rem]">
                       <span className="hover:text-gray-500 hover:underline">
                         +8801990009039
                       </span>
@@ -91,7 +71,7 @@ const OurServices = () => {
                 <div className="w-full border-b py-2">
                   <Link className="" href="/products/knitting-machine">
                     Hotline:{" "}
-                    <span className="text-sm hover:text-gray-500 hover:underline">
+                    <span className=" hover:text-gray-500 hover:underline">
                       +8801886610800
                     </span>
                   </Link>
@@ -99,7 +79,7 @@ const OurServices = () => {
                 <div className="w-full border-b py-2">
                   <Link className="" href="/products/knitting-machine">
                     WeChat:{" "}
-                    <span className="text-sm hover:text-gray-500 hover:underline">
+                    <span className=" hover:text-gray-500 hover:underline">
                       +8801995767752
                     </span>
                   </Link>
@@ -107,7 +87,7 @@ const OurServices = () => {
                 <div className="w-full border-b py-2">
                   <Link className="" href="/products/knitting-machine">
                     Email:{" "}
-                    <span className="text-sm hover:text-gray-500 hover:underline">
+                    <span className=" hover:text-gray-500 hover:underline">
                       <span className="lowercase">
                         gawsiainternationaltrade@gmail.com
                       </span>
@@ -117,7 +97,7 @@ const OurServices = () => {
               </div>
             </div>
           </div>
-          <div className="w-3/4 h-full py-8 px-10">
+          <div className="w-2/3 h-full py-8 px-10">
             <h1 className="text-4xl font-bold py-6 w-full border-b">
               Our Services
             </h1>
@@ -134,7 +114,7 @@ const OurServices = () => {
               1. <span className="font-bold">Pre-sale Service:</span> We can
               provide you with fabric samples and product brochures for free,
               inclusive of freight.
-              <br />
+              <br /><br />
               2. <span className="font-bold">Selling Service:</span>
               <p className="ml-6">
                 a) The delivery time of our products is approximately 70-90 days
@@ -163,6 +143,8 @@ const OurServices = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

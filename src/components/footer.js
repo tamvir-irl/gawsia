@@ -61,36 +61,36 @@ export default function Home() {
   const Footer = () => {
     return (
       <footer className="bg-gray-900 text-gray-300 pt-6 pb-4">
-        <div className="container mx-auto px-6 md:px-16 lg:px-28">
+        <div className="container mx-auto px-6 md:px-16 lg:px-12">
           <div className="flex flex-wrap justify-between">
             {/* Contact Section */}
             <div className="mb-2">
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
+              <h3 className="text-xl font-semibold mb-4">Contact</h3>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-sm hover:text-white">
+                  <span className=" hover:text-white">
                     Add: 4th Floor, Navana Tower, 45 Gulshan Ave<br/>
                     Dhaka-1212, Bangladesh.
                   </span>
                 </li>
                 <li className="flex flex-col gap-1">
-                  <span className="text-sm hover:text-white">Phone: +8801995767752, +8801929969797</span>
-                  <span className="text-sm hover:text-white pl-[3rem]">+8801990009039, +8801910519200</span>
+                  <span >Phone: <span className=" hover:text-white">+8801995767752</span> , <span className=" hover:text-white">+8801929969797</span></span>
+                  <span className="pl-[3.4rem]"><span className=" hover:text-white">+8801990009039</span> , <span className=" hover:text-white">+8801910519200</span></span>
                 </li>
                 <li className="flex flex-col gap-1">
-                <span className="text-sm hover:text-white">Hotline: +8801886610800</span>
+                <span className=" hover:text-white">Hotline: +8801886610800</span>
                 </li>
                 <li className="flex flex-col gap-1">
-                <span className="text-sm hover:text-white">WeChat: +8801995767752</span>
+                <span className=" hover:text-white">WeChat: +8801995767752</span>
                 </li>
                 <li className="flex flex-col gap-1">
-                <span className="text-sm hover:text-white">Email: info@git.com</span>
+                <span className=" hover:text-white">Email: info@git.com</span>
                 </li>
               </ul>
             </div>
   
             {/* Logo & Text Section */}
-            <div className="mb-10 flex  items-center">  
+            <div className="mr-10 flex justify-center items-center">  
               <img src="/logo2.png" width={250} height={200} />
             </div>
           </div>

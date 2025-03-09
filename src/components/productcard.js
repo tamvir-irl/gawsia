@@ -5,14 +5,14 @@ export default function Home({title, description, bg}) {
       services : "In the world of revolution, we want to serve the best quality circular knitting machine (Buen-Knit) in Bangladesh. We always try to be connected with our clients and give the best service. We have high production capacity, good machine performance, a professional technical team, competitive pricing and 1-year warranty support."
     }
     return (
-      <div className="w-11/12 h-4/5 bg-white rounded-2xl shdw p-6 flex flex-col items-center">
+      <div className="w-11/12 h-[90%] bg-white rounded-2xl shdw p-6 flex flex-col items-center">
         <div className="w-2/3 aspect-square rounded-xl ">
           <div className="w-full h-full overflow-hidden rounded-lg">
           <img src={bg} className="w-full h-full hover:scale-110 duration-200 rounded-lg hover:rounded-lg"/>
           </div>
         </div>
         <div className="w-full h-full p-4 ">
-            <h1 className="text-gray-700 text-xl font-black uppercase">{title}</h1>
+            <h1 className="text-gray-700 text-lg font-black uppercase">{title}</h1>
             <br />
             <p className="text-gray-700 text-xl text-justify">{description}</p>
         </div>
