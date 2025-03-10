@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div className="w-full h-screen">
       <Carousel />
-      <Section1 title={"About Us"} description={descriptions.about} bg={'/about.jpg'}/>
-      <Section1 title={"Our Services"} description={descriptions.services} bg={'/2.jpg'} reversed={true}/>
+      <Section1 title={"About Us"} description={descriptions.about} bg={'/about.jpg'} link="/about" />
+      <Section1 title={"Our Services"} description={descriptions.services} bg={'/2.jpg'} reversed={true} link="/our_services" />
       <br />
       <br />
       <br />

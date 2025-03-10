@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export default function Home({ title, description, bg, reversed }) {
+export default function Home({ title, description, bg, reversed, link }) {
   const [hasFadedIn, setHasFadedIn] = useState(false);
   const ref = useRef(null);
 
@@ -50,12 +51,12 @@ export default function Home({ title, description, bg, reversed }) {
                 {description}
               </p>
               <div className="grid place-content-center mt-8">
-                <a
-                  href="#"
+                <Link
+                  href={link}
                   className="text-lg text-white bg-gradient-to-r from-gray-800 to-gray-600 px-8 py-4 text-center rounded-md shadow-md transform transition duration-300 hover:scale-95 hover:from-gray-700 hover:to-gray-500"
                 >
                   Learn More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -71,12 +72,12 @@ export default function Home({ title, description, bg, reversed }) {
                 {description}
               </p>
               <div className="grid place-content-center mt-8">
-                <a
-                  href="#"
+                <Link
+                  href={link}
                   className="text-lg text-white bg-gradient-to-r from-gray-800 to-gray-600 px-8 py-4 text-center rounded-md shadow-md transform transition duration-300 hover:scale-95 hover:from-gray-700 hover:to-gray-500"
                 >
                   Learn More
-                </a>
+                </Link>
               </div>
             </div>
             <div
