@@ -44,7 +44,7 @@ const AboutBuenKnit = () => {
                   {products.map((product) => (
                     <div className="w-full border-b py-2" key={product}>
                       <Link href={`/products/${product}`}>
-                        {products.indexOf(product) + 1}. {product}
+                      {products.indexOf(product) + 1}. <span className="hover:underline hover:text-gray-500">{product}</span>
                       </Link>
                     </div>
                   ))}
@@ -142,6 +142,7 @@ const AboutBuenKnit = () => {
               <h1 className="text-4xl font-bold py-6 w-full border-b">
                 Buen-Knit Factory
               </h1>
+              <br />
               <VideoCarousel />
                 <br />
               <div className="w-full flex gap-2 rounded-lg overflow-hidden">
@@ -152,7 +153,7 @@ const AboutBuenKnit = () => {
               <h1 className="text-4xl font-bold py-6 w-full border-b">
                 Certificates
               </h1>
-
+                  <br />
               {/* Clickable Certificate Image */}
               <img
                 src="/bkcer.jpg"

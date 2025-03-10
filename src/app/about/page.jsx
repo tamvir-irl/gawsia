@@ -18,8 +18,8 @@ const AboutUs = () => {
                 {products.map((product) => {
                   return (
                     <div className="w-full border-b py-2" key={product}>
-                      <Link className="" href={`/products/${product}`}>
-                        {products.indexOf(product) + 1}. {product}
+                      <Link href={`/products/${product}`}>
+                        {products.indexOf(product) + 1}. <span className="hover:underline hover:text-gray-500">{product}</span>
                       </Link>
                     </div> 
                   )

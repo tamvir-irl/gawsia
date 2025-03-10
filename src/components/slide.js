@@ -25,7 +25,12 @@ export default function CarouselPlugin({ from }) {
       )}
 
       {/* Carousel */}
-      <Carousel plugins={[plugin.current]} className="w-1/2 rounded-lg overflow-hidden">
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-1/2 rounded-lg overflow-hidden"
+        onMouseEnter={() => plugin.current.stop()}  // Pause on hover
+        onMouseLeave={() => plugin.current.play()}  // Resume on leave
+      >
         <CarouselContent className="rounded-lg">
           {Array.from({ length: 6 }).map((_, index) => {
             const imageUrl = `/slides/${from + index}.jpg`;
