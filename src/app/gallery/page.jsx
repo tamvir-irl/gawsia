@@ -1,10 +1,10 @@
 import Footer from "@/components/footer";
 import Link from "next/link";
 import { products } from "../utils/products";
-
-const WhyChooseUs = () => {
+import CarouselPlugin from "@/components/slide2";
+const AboutUs = () => {
   return (
-<>
+    <>
     <div className="py-4  w-full h-full">
       <img className="mt-28" src="/B1.jpg" alt="" />
       <div className="mt-2 px-[12.4rem] w-full h-full">
@@ -16,15 +16,16 @@ const WhyChooseUs = () => {
                 Our Products
               </h1>
               <div className="w-full px-6 uppercase">
-              {products.map((product) => {
+                {products.map((product) => {
                   return (
                     <div className="w-full border-b py-2" key={product}>
-                      <Link className="" href={`/products/${product}`}>
-                      {products.indexOf(product) + 1}. <span className="hover:underline hover:text-gray-500">{product}</span>
+                      <Link href={`/products/${product}`}>
+                        {products.indexOf(product) + 1}. <span className="hover:underline hover:text-gray-500">{product}</span>
                       </Link>
                     </div> 
                   )
                 })}
+                
               </div>
             </div>
             <div className="w-full  flex flex-col py-5 border">
@@ -97,19 +98,9 @@ const WhyChooseUs = () => {
             </div>
           </div>
           <div className="w-2/3 h-full py-8 px-10">
-            <h1 className="text-4xl font-bold py-6 w-full border-b">Mission And Vision</h1>
+            <h1 className="text-4xl font-bold py-6 w-full border-b">Gallery</h1>
             <br />
-            <div className="text-justify text-xl ">
-            Enriching the garments industry of Bangladesh by providing the highest quality circular knitting machines in our country to keep up with the fast-changing world. We want to contribute to the country’s economy and for her people, become a symbol of trust and quality in their everyday lives.
-            <br /><br />
-By fostering innovation and sustainability, we aim to empower local manufacturers and artisans, enabling them to compete on a global scale. This commitment will not only elevate the garment sector but also create a ripple effect of growth and opportunity throughout the entire community.
-<br /><br />
-Through collaborative efforts and strategic partnerships, we envision a future where every garment produced tells a story of craftsmanship and community pride. Together, we can build a resilient ecosystem that champions ethical practices while meeting the evolving needs of consumers everywhere.
-<br /> <br />
-This vision requires a collective mindset focused on sustainability and innovation, ensuring that as we grow, we also protect the environment and empower our workforce. By prioritizing these values, we can inspire a new generation of consumers who appreciate not just the products they buy, but the artisans behind them.
-
-
-            </div>
+            <CarouselPlugin from={1} dir="slides2" length={4} w="full" />
           </div>
         </div>
       </div>
@@ -119,4 +110,4 @@ This vision requires a collective mindset focused on sustainability and innovati
   );
 };
 
-export default WhyChooseUs;
+export default AboutUs;

@@ -146,8 +146,8 @@ const AboutBuenKnit = () => {
               <VideoCarousel />
                 <br />
               <div className="w-full flex gap-2 rounded-lg overflow-hidden">
-                <CarouselPlugin from={1} />
-                <CarouselPlugin from={7} />
+                <CarouselPlugin from={1} length={6} dir="slides" w="1/2" />
+                <CarouselPlugin from={7} length={6} dir="slides" w="1/2" />
               </div>
 
               <h1 className="text-4xl font-bold py-6 w-full border-b">

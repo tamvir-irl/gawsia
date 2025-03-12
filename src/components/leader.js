@@ -31,9 +31,6 @@ export default function TeamSection() {
 
   return (
     <>
-    <div className="p-8">
-    <h1 className="text-4xl font-bold py-4 border-b">Leadership Team</h1>
-    </div>
       <div className="flex justify-center gap-4 p-8">
         {teamMembers.map((member, index) => (
           <div
@@ -75,8 +72,8 @@ export default function TeamSection() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="absolute inset-0 flex flex-col items-center justify-center text-white text-center"
               >
-                <p className="text-2xl font-bold">{member.name}</p>
-                <p className="text-lg">{member.position}</p>
+                <p className="text-lg font-bold">{member.name}</p>
+                <p className="text">{member.position}</p>
               </motion.div>
             )}
           </div>
