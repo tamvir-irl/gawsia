@@ -107,26 +107,30 @@ const AboutUs = () => {
             <h1 className="text-4xl font-bold py-6 w-full border-b">Videos</h1>
             <br />
             <div className="flex gap-4 w-full">
+            <div className="rounded-xl w-1/2 aspect-video overflow-hidden">
             <iframe
         src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbuenknitbd%2Fvideos%2F672520949005239%2F&show_text=false&width=560&t=0"
-        width="560"
-        height="314"
+        width="100%"
+        height="100%"
         style={{ border: 'none', overflow: 'hidden' }}
         scrolling="no"
         frameBorder="0"
         allowFullScreen={true}
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       ></iframe>
+            </div>
+            <div className="rounded-xl w-1/2 aspect-video overflow-hidden">
             <iframe
         src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbuenknitbd%2Fvideos%2F974326674883043%2F&show_text=false&width=560&t=0"
-        width="560"
-        height="314"
+        width="100%"
+        height="100%"
         style={{ border: 'none', overflow: 'hidden' }}
         scrolling="no"
         frameBorder="0"
         allowFullScreen={true}
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
       ></iframe>
+            </div>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ const teamMembers = [
     image: "/saiful.jpg",
   },
   {
-    name: "Engineer Md. Sheikh Forid Polok",
+    name: "Engineer Md.Sheikh Forid Polok",
     position: "Chief Executive Officer (CEO)",
     image: "/polok.jpg",
   },

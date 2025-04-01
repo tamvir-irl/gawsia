@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import Link from "next/link";
 
-export default function Dropdown({ title, items, paths }) {
+export default function Dropdown({ title, items, paths, isLink }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,7 +13,7 @@ export default function Dropdown({ title, items, paths }) {
     >
       {/* Dropdown Button */}
       <div className="inline-flex w-full justify-center gap-x-1.5 hover:underline hover:underline-offset-4 uppercase cursor-pointer">
-        {title}
+        {isLink ? <Link href={`/${title.toLowerCase()}`}>{title}</Link> : title}
         <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-gray-700" />
       </div>
 

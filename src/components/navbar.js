@@ -78,7 +78,7 @@ export default function Home() {
           <Dropdown title={"Business Unit"} items={units} paths={unitPaths} />
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
-          <Dropdown title={"Products"} items={products} paths={productPaths} />
+          <Dropdown title={"Products"} items={products} paths={productPaths} isLink={true} />
         </li>
         <li className="hover:text-black hover:underline hover:underline-offset-4 duration-50">
           <a href="/clients">Clients</a>

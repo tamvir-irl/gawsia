@@ -78,13 +78,13 @@ export default function Home() {
                   <span className="pl-[3.4rem]"><span className=" hover:text-white">+8801990009039</span> , <span className=" hover:text-white">+8801910519200</span></span>
                 </li>
                 <li className="flex flex-col gap-1">
-                <span className=" hover:text-white">Hotline: +8801886610800</span>
+                <span>Hotline: <span className=" hover:text-white">+8801886610800</span></span>
                 </li>
                 <li className="flex flex-col gap-1">
-                <span className=" hover:text-white">WeChat: +8801995767752</span>
+                <span>WeChat: <span className=" hover:text-white">+8801995767752</span></span>
                 </li>
                 <li className="flex flex-col gap-1">
-                <span className=" hover:text-white">Email: info@git.com</span>
+                <span>Email: <span className=" hover:text-white">gawsiainternationaltrade.com</span></span>
                 </li>
               </ul>
             </div>
