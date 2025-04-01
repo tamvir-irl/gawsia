@@ -98,9 +98,36 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="w-2/3 h-full py-8 px-10">
-            <h1 className="text-4xl font-bold py-6 w-full border-b">Gallery</h1>
+            <h1 className="text-4xl font-bold py-6 w-full border-b">Photos</h1>
             <br />
-            <CarouselPlugin from={1} dir="slides2" length={4} w="full" />
+            <div className="flex gap-4 w-full">
+            <CarouselPlugin from={1} dir="slides3" length={4} w="1/2" captions={"Our honorable Managing Director and Chief Executive Officer (CEO) visited the DTG Exhibition 2025."}/>
+            <CarouselPlugin from={1} dir="slides2" length={6} w="1/2" captions={"Our honorable Managing Director attended the Doa and Iftar Mahfil organized by the Bangladesh Knitting Owners Association - 2025"}/>
+            </div>
+            <h1 className="text-4xl font-bold py-6 w-full border-b">Videos</h1>
+            <br />
+            <div className="flex gap-4 w-full">
+            <iframe
+        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbuenknitbd%2Fvideos%2F672520949005239%2F&show_text=false&width=560&t=0"
+        width="560"
+        height="314"
+        style={{ border: 'none', overflow: 'hidden' }}
+        scrolling="no"
+        frameBorder="0"
+        allowFullScreen={true}
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      ></iframe>
+            <iframe
+        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbuenknitbd%2Fvideos%2F974326674883043%2F&show_text=false&width=560&t=0"
+        width="560"
+        height="314"
+        style={{ border: 'none', overflow: 'hidden' }}
+        scrolling="no"
+        frameBorder="0"
+        allowFullScreen={true}
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      ></iframe>
+            </div>
           </div>
         </div>
       </div>

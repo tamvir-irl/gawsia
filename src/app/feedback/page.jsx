@@ -106,10 +106,10 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="w-2/3 h-full py-8 px-10">
-            <h1 className="text-4xl font-bold py-6 w-full border-b">Contact Us</h1>
+            <h1 className="text-4xl font-bold py-6 w-full border-b">Feedback</h1>
             <br />
             <form onSubmit={onSubmit} className="flex flex-col gap-4 items-center">
-              <input type="hidden" name="type" value="Contact" />
+              <input type="hidden" name="type" value="Feedback" />
               <input type="text" name="name" required placeholder="Your Name" className="border p-4 w-full" />
               <input type="email" name="email" required placeholder="Your Email" className="border p-4 w-full" />
               <textarea name="message" required placeholder="Your Message" className="border p-4 h-[400px] w-full"></textarea>

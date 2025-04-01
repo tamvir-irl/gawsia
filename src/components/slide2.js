@@ -5,7 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
-export default function CarouselPlugin({ from, length, dir, w, captions = [] }) {
+export default function CarouselPlugin({ from, length, dir, w, captions }) {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -50,8 +50,8 @@ export default function CarouselPlugin({ from, length, dir, w, captions = [] }) 
                       onClick={() => setSelectedImage(imageUrl)}
                     >
                       {/* Caption Overlay */}
-                      <div className="absolute left-0 bottom-0 w-full bg-gradient-to-t from-black/80 via-black/50 to-black/0 text-white text-center px-3 py-16">
-                        <p className="mt-4 text-xl font-bold">{captions[index] || "Our honorable Managing Director and Chief Executive Officer (CEO) visited the DTG Exhibition 2025"}</p>
+                      <div className="absolute left-0 bottom-0 w-full bg-gradient-to-t from-black/80 via-black/50 to-black/0 text-white text-center px-3 py-4">
+                        <p className="mt-8 text-lg font-bold">{captions || "Our honorable Managing Director and Chief Executive Officer (CEO) visited the DTG Exhibition 2025"}</p>
                       </div>
                     </CardContent>
                   </Card>
