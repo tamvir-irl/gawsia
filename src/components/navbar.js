@@ -32,14 +32,14 @@ export default function Home() {
   ];
 
   const productPaths = [
-    "/single_jersey_machines",
-    "/double_jersey_machines",
-    "/electronic_jacquard_machines",
-    "/circular_knitting_machines_spare_parts",
+    "/products/single_jersey/",
+    "/products/double_jersey/",
+    "/products/electronic_jacquard/",
+    "/products/spare_parts/",
   ];
 
-  const connect = ["CONTACT US", "NEWS AND UPDATES", "FEEDBACK"];
-  const connectPaths = ["/contact", "/news_updates", "/feedback"];
+  const connect = ["CONTACT US", "NEWS AND UPDATES", "FEEDBACK", "DOWNLOAD BUEN-KNIT CATALOGUE"];
+  const connectPaths = ["/contact", "/news_updates", "/feedback", "https://drive.google.com/uc?export=download&id=1r6dIe8LhZi1Udq4WDiVg61VDpIqE-AWW"];
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
