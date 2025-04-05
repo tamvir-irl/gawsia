@@ -11,7 +11,7 @@ const WhyChooseUs = ({ params }) => {
   const id = parseInt(params.id, 10); // Convert id to number
   const [selectedImage, setSelectedImage] = useState(null);
   const singleJerseyProducts = categories.find(
-    (category) => category.name === "SINGLE JERSEY CIRCULAR KNITTING MACHINES"
+    (category) => category.name === "COMPUTERIZED/ELECTRONIC JACQUARD CIRCULAR KNITTING MACHINES"
   )?.products || [];
 
   const [product, setProduct] = useState(null);
@@ -153,7 +153,7 @@ const WhyChooseUs = ({ params }) => {
                   <br />
                   <br />
                   <br />
-                  <span>Category: <Link href="/products/single_jersey" className="underline hover:text-gray-500">Single Jersey Machines</Link></span>
+                  <span>Category: <Link href="/products/electronic_jacquard" className="underline hover:text-gray-500">Electronic Jacquard Machines</Link></span>
                   </div>
                 </div>
               </div>

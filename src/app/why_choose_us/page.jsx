@@ -11,22 +11,23 @@ const WhyChooseUs = () => {
 
         <div className="w-full h-[200%] flex">
           <div className="w-1/3 h-[200%] flex flex-col items-center px-2 py-2 sticky top-28">
-            <div className="w-full  flex flex-col py-5 border">
-              <h1 className="w-full text-2xl font-bold border-l-4 border-slate-900 p-4">
-                Our Products
-              </h1>
-              <div className="w-full px-6 uppercase">
-              {products.map((product) => {
-                  return (
-                    <div className="w-full border-b py-2" key={product}>
-                      <Link className="" href={`/products/${product}`}>
-                      {products.indexOf(product) + 1}. <span className="hover:underline hover:text-gray-500">{product}</span>
+          <div className="w-full flex flex-col py-5 border">
+                <h1 className="w-full text-2xl font-bold border-l-4 border-slate-900 p-4">
+                  Our Products
+                </h1>
+                <div className="w-full px-6 uppercase">
+                  {products.map((product, index) => (
+                    <div className="w-full border-b py-2" key={index}>
+                      <Link className="" href={`/products/${product.path}`}>
+                        {index + 1}.{" "}
+                        <span className="hover:underline hover:text-gray-500">
+                          {product.name}
+                        </span>
                       </Link>
-                    </div> 
-                  )
-                })}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
             <div className="w-full  flex flex-col py-5 border">
               <h3 className="w-full text-2xl border-l-4 border-slate-900 p-4 font-bold">Contact</h3>
               <div className="w-full px-6 uppercase">

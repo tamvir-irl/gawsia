@@ -11,10 +11,11 @@ const WhyChooseUs = ({ params }) => {
   const id = parseInt(params.id, 10); // Convert id to number
   const [selectedImage, setSelectedImage] = useState(null);
   const singleJerseyProducts = categories.find(
-    (category) => category.name === "SINGLE JERSEY CIRCULAR KNITTING MACHINES"
+    (category) => category.name === "CIRCULAR KNITTING MACHINES SPARE PARTS"
   )?.products || [];
 
   const [product, setProduct] = useState(null);
+  
 
   useEffect(() => {
     if (singleJerseyProducts.length > 0 && id > 0 && id <= singleJerseyProducts.length) {
@@ -25,6 +26,7 @@ const WhyChooseUs = ({ params }) => {
   if (!product) {
     return <div>Loading...</div>; // Show a loading message until product is set
   }
+  console.log(product.imagesCount)
   function formattedText(text) {
     // Replace all \n with <br /> tags
     return text.split('\n').map((line, index) => (
@@ -143,7 +145,7 @@ const WhyChooseUs = ({ params }) => {
             <div className="w-2/3 h-full py-8 px-10">
               <div className="w-full h-[330px] flex">
                 <div className="w-1/3 h-full flex flex-col gap-2 items-center">
-                <ProdCar length={product.imagesCount} path={product.path}></ProdCar>
+                  <ProdCar length={product.imagesCount} path={product.path}></ProdCar>
                 </div>
                 <div className="w-2/3 h-full p-8 flex items-center">
                   <div >
@@ -153,31 +155,16 @@ const WhyChooseUs = ({ params }) => {
                   <br />
                   <br />
                   <br />
-                  <span>Category: <Link href="/products/single_jersey" className="underline hover:text-gray-500">Single Jersey Machines</Link></span>
+                  <span>Category: <Link href="/products/spare_parts" className="underline hover:text-gray-500">Spare Parts</Link></span>
                   </div>
                 </div>
               </div>
-              {/* Product Description */}
-              <div className="w-full h-full py-2 px-10">
-                <h1 className="text-2xl font-bold py-6 w-full border-b">Machine Description</h1>
-                <br />
-                <div className="text-justify text-xl">
-                    <ul>
-                        {
-                            product.description.map((desc, index) => {
-                                return (
-                                    <li className="mb-4 text-base" key={index}>{index + 1}. {desc}</li>
-                                ) 
-                            })
-                        }
-                    </ul>
-                </div>
-              </div>
+              
               {/* Product Features */}
               {
                 product.features && (
                     <div className="w-full h-full py-2 px-10">
-                    <h1 className="text-2xl font-bold py-6 w-full border-b">Machine Features</h1>
+                    <h1 className="text-2xl font-bold py-6 w-full border-b">Product Features</h1>
                     <br />
                     <div className="text-justify text-xl">
                         <ul>
@@ -193,90 +180,7 @@ const WhyChooseUs = ({ params }) => {
                   </div> 
                 )
               }
-              {/* Product Application */}
-              {
-                product.application && (
-                    <div className="w-full h-full py-2 px-10">
-                        <h1 className="text-2xl font-bold py-6 w-full border-b">Product Applications</h1>
-                        <br />
-                        <span className="mb-4 text-base">{product.application}</span>
-                    </div>
-                )
-              }
-              {/* Fabric Sample */}
-              {
-                product.fabricSamples && (
-                    <div className="w-full h-full py-2 px-10">
-                    <h1 className="text-2xl font-bold py-6 w-full border-b">Fabric Sample</h1>
-                    <br />
-                    <img
-                    src={product.fabricSamples}
-                    className="w-1/2 cursor-pointer"
-                    alt="Certificate"
-                    onClick={() => setSelectedImage(product.fabricSamples)}
-                  /> 
-                  </div>
-                )
-              }
               
-              
-              {/* Machine Dimensions */}
-              {
-                product.dimensions && (
-                <div className="w-full h-full py-2 px-10">
-                <h1 className="text-2xl font-bold py-6 w-full border-b">Machine Dimensions</h1>
-                <br />
-                <table className="min-w-full border-collapse border border-gray-300">
-                    <thead>
-                    <tr className="bg-gray-200">
-                        <th className="border border-gray-300 px-4 py-2">Diameter</th>
-                        <th className="border border-gray-300 px-4 py-2">Net Weight (kg)</th>
-                        <th className="border border-gray-300 px-4 py-2">Gross Weight (kg)</th>
-                        <th className="border border-gray-300 px-4 py-2">Wooden Case Size (cm)</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {product.dimensions.map((row, index) => (
-                        <tr key={index} className="odd:bg-white even:bg-gray-100">
-                        <td className="border border-gray-300 px-4 py-2 text-center">{row.Diameter}</td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">{row.NetWeight}</td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">{row.GrossWeight}</td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">{row.WoodenCaseSize}</td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
-              </div>
-                )
-              }
-              {
-                product.dimensionsImg && (
-                <div className="w-full h-full py-2 px-10">
-                <h1 className="text-2xl font-bold py-6 w-full border-b">Machine Dimensions</h1>
-                <br />
-                <img
-                    src={product.dimensionsImg}
-                    className="w-full cursor-pointer"
-                    alt="Certificate"
-                    onClick={() => setSelectedImage(product.dimensionsImg)}
-                  /> 
-              </div>
-                )
-              }
-              {/* Standard Equipment List */}
-              {
-                product.standardEquipmentList &&
-                (
-                <div className="w-full h-full py-2 px-10">
-                    <h1 className="text-2xl font-bold py-6 w-full border-b">Standard Equipment List</h1>
-                    <br />
-                    <div className="mb-4 text-base">
-                        {formattedText(product.standardEquipmentList)}
-                    </div>
-                </div>
-                )
-              }
-              <br />
               {/* Product PDF */}
               {
                 product.pdf && (

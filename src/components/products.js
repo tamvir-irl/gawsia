@@ -11,13 +11,13 @@ export default function Home() {
         <hr className="w-1/2 hbar"/>
         <div className="w-full h-full bg-white grid grid-cols-3">
         <div className="w-full h-full p-6 flex flex-col items-center justify-center">
-      <ProductCard title={"SINGLE JERSEY CIRCULAR KNITTING MACHINES"} description={descriptions.product1} bg={"/p3.png"}/>
+      <ProductCard title={"SINGLE JERSEY CIRCULAR KNITTING MACHINES"} description={descriptions.product1} bg={"/p3.png"} link={"/products/single_jersey"}/>
       </div>
       <div className="w-full h-full p-6 flex flex-col items-center justify-center">
-        <ProductCard title={"DOUBLE JERSEY CIRCULAR KNITTING MACHINES"} description={descriptions.product2} bg={"/p1.png"}/>
+        <ProductCard title={"DOUBLE JERSEY CIRCULAR KNITTING MACHINES"} description={descriptions.product2} bg={"/p1.png"} link={"/products/double_jersey"}/>
       </div>
       <div className="w-full h-full p-6 flex flex-col items-center justify-center">
-      <ProductCard title={"COMPUTERIZED/ELECTRONIC JACQUARD CIRCULAR KNITTING MACHINES"} description={descriptions.product3} bg={"/p2.png"}/>
+      <ProductCard title={"COMPUTERIZED/ELECTRONIC JACQUARD CIRCULAR KNITTING MACHINES"} description={descriptions.product3} bg={"/p2.png"} link={"/products/electronic_jacquard"}/>
       </div>
       
     </div>

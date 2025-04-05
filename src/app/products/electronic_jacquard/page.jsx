@@ -7,7 +7,8 @@ import Link from "next/link";
 import Footer from "@/components/footer";
 
 export default function ProductGrid() {
-    const category = categories.find(machine => machine.name === "SINGLE JERSEY CIRCULAR KNITTING MACHINES");
+    const category = categories.find(machine => machine.name === "COMPUTERIZED/ELECTRONIC JACQUARD CIRCULAR KNITTING MACHINES");
+    console.log(category)
   return (
     <>
         <div className="w-full flex justify-center items-center -ml-4">
@@ -20,7 +21,7 @@ export default function ProductGrid() {
                     <h2 className="text-2xl font-semibold mb-4">{category.name}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-4">
                     {category.products.map((product, idx) => (
-                        <Link key={idx} href={`/products/single_jersey/${idx + 1}`}>
+                        <Link key={idx} href={`/products/electronic_jacquard/${idx + 1}`}>
                             <Card  className="shadow-lg hover:shadow-xl transition cursor-pointer">
                             <CardContent className="p-4">
                             <img

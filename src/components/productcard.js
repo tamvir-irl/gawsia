@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card"; // Make sure you have ShadCN installed
+import Link from "next/link";
 
-export default function Home({ title, description, bg }) {
+export default function Home({ title, description, bg, link }) {
   const [isZoomed, setIsZoomed] = useState(false); // State to track zoom status
 
   const descriptions = {
@@ -35,12 +36,12 @@ export default function Home({ title, description, bg }) {
           <p className="text-gray-700 text-xl text-justify">{description}</p>
         </CardContent>
         <CardFooter className="w-full flex justify-end">
-          <a
-            href="#"
+          <Link
+            href={link}
             className="text-lg text-white bg-gray-800 px-8 py-3 text-center rounded hover:bg-gray-700 transition duration-200 hover:scale-90"
           >
             Learn More
-          </a>
+          </Link>
         </CardFooter>
       </Card>
 
